@@ -26,9 +26,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               SIZE
             </div>
             <div className="hidden md:block h-8 w-px bg-primary/30"></div>
-            <div className="hidden md:block text-white/60 text-sm">
-              Elite Gang
-            </div>
+            <div className="hidden md:block text-white/60 text-sm"></div>
           </div>
 
           <div className="hidden md:flex items-center gap-2">
