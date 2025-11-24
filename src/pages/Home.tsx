@@ -24,7 +24,7 @@ export default function Home() {
         
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
           <div className="mb-6">
-            <h1 className="md:text-9xl font-black text-white tracking-wider drop-shadow-2xl text-xl">
+            <h1 className="md:text-9xl font-black text-white tracking-wider drop-shadow-2xl text-7xl">
               Kavkazskoe Bratstvo
             </h1>
             <div className="h-1 w-32 bg-primary mx-auto mt-4"></div>
