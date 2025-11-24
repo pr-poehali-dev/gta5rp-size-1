@@ -43,22 +43,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-8 z-10 animate-fade-in">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">500+</div>
-            <div className="text-white/80 text-sm">Участников</div>
-          </div>
-          <div className="h-12 w-px bg-white/30"></div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-secondary">10+</div>
-            <div className="text-white/80 text-sm">Лет опыта</div>
-          </div>
-          <div className="h-12 w-px bg-white/30"></div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">#1</div>
-            <div className="text-white/80 text-sm">В рейтинге</div>
-          </div>
-        </div>
+
       </div>
     </div>
   );

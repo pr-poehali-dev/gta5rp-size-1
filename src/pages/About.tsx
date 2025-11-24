@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useEffect, useState } from "react";
 
@@ -30,72 +29,49 @@ export default function About() {
             <div className="h-1 w-24 bg-primary mb-12"></div>
 
             <div className="space-y-8 animate-fade-in-up">
-              <Card className="bg-black/50 border-primary/30 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/20 p-3 rounded-lg">
-                      <Icon name="Crown" size={28} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Наша история</h3>
-                      <p className="text-white/80 leading-relaxed text-lg">
-                        Kavkazskoe Bratstvo - это не просто группировка, это элита Los Santos. Мы создали империю, 
-                        основанную на силе, уважении и непоколебимой верности. Наша организация 
-                        контролирует ключевые точки города и устанавливает правила игры.
-                      </p>
-                    </div>
+              <div className="bg-gradient-to-br from-black/80 to-black/60 border border-primary/30 p-8 rounded-lg backdrop-blur-sm">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-primary/20 p-3 rounded-lg flex-shrink-0">
+                    <Icon name="Crown" size={28} className="text-primary" />
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h3 className="text-3xl font-bold text-white mb-4">Kavkazskoe Bratstvo</h3>
+                  </div>
+                </div>
 
-              <Card className="bg-black/50 border-primary/30 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/20 p-3 rounded-lg">
-                      <Icon name="Target" size={28} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Наша миссия</h3>
-                      <p className="text-white/80 leading-relaxed text-lg">
-                        Мы стремимся к доминированию в криминальном мире Los Santos через 
-                        стратегическое планирование, командную работу и безупречное выполнение 
-                        операций. Каждый член Kavkazskoe Bratstvo - это профессионал высшего класса.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                <div className="text-white/90 leading-relaxed space-y-4">
+                  <p className="text-lg">
+                    Кавказская мафия - Мафия, которая была основана в единую мафию живущих в кавказских странах как: Азербайджан, Дагестан, Чечня, Грузия, Абхазия, Южная часть России.
+                  </p>
 
-              <Card className="bg-black/50 border-primary/30 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/20 p-3 rounded-lg">
-                      <Icon name="Shield" size={28} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Наши ценности</h3>
-                      <div className="grid md:grid-cols-2 gap-4 mt-4">
-                        <div className="flex items-center gap-3">
-                          <Icon name="Check" size={20} className="text-primary" />
-                          <span className="text-white/80">Верность семье</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Icon name="Check" size={20} className="text-primary" />
-                          <span className="text-white/80">Честь и уважение</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Icon name="Check" size={20} className="text-primary" />
-                          <span className="text-white/80">Профессионализм</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Icon name="Check" size={20} className="text-primary" />
-                          <span className="text-white/80">Дисциплина</span>
-                        </div>
-                      </div>
+                  <div className="bg-black/40 p-6 rounded-lg border border-primary/20 my-6">
+                    <h4 className="text-xl font-bold text-primary mb-4">Основная информация:</h4>
+                    <div className="grid md:grid-cols-2 gap-3 text-white/80">
+                      <div><span className="text-secondary font-semibold">Название:</span> Kavkazskoe Bratstvo</div>
+                      <div><span className="text-secondary font-semibold">Год основания:</span> 2025 год</div>
+                      <div><span className="text-secondary font-semibold">Место основания:</span> Los-Santos</div>
+                      <div><span className="text-secondary font-semibold">Место проживания:</span> Особняк на Вайнвуде</div>
+                      <div><span className="text-secondary font-semibold">Глава:</span> AIexey Fomin</div>
+                      <div><span className="text-secondary font-semibold">Одежда:</span> Стиль красный</div>
+                      <div className="md:col-span-2"><span className="text-secondary font-semibold">Прикрытие:</span> Частное Охранное Предприятие</div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+
+                  <h4 className="text-2xl font-bold text-white mt-8 mb-4">История:</h4>
+                  
+                  <p>
+                    Кавказская мафия одна из крупнейших и влиятельных мафий на територии Лос-Сантоса. Основаная на уважении, дисциплине и стреплении к вершине. Группировка известна своим участием в различных незаконных действиях, включая организованную преступность, незаконный оборот "наркоты" и отмывание денег.
+                  </p>
+
+                  <p>
+                    Истоки Кавказской мафии можно проследить до начала 1990-х годов, после распада Советского Союза. В это время Кавказский регион пережил политическую нестабильность и экономические потрясения, что привело к росту преступной активности, и именно в этот момент случилось временный развал Кавказской мафии которая разделилась на разные группировки.
+                  </p>
+
+                  <p className="font-semibold text-primary">
+                    И только в 2025 году Алексей Фомин Леонидович восоеденил группировки которые входили в состав Кавказской мафии.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

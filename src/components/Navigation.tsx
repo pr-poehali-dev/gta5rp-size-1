@@ -13,7 +13,6 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   const navItems = [
     { id: 'home', label: 'Главная', icon: 'Home' },
     { id: 'about', label: 'О нас', icon: 'Info' },
-    { id: 'news', label: 'Новости', icon: 'Newspaper' },
     { id: 'leadership', label: 'Руководство', icon: 'Crown' },
   ];
 

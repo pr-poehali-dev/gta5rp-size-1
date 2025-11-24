@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import News from "./pages/News";
 import Leadership from "./pages/Leadership";
 
 const queryClient = new QueryClient();
@@ -35,8 +34,6 @@ const App = () => {
         return <Home />;
       case 'about':
         return <About />;
-      case 'news':
-        return <News />;
       case 'leadership':
         return <Leadership />;
       default:
