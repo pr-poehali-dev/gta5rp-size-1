@@ -30,9 +30,7 @@ export default function Home() {
             <div className="h-1 w-32 bg-primary mx-auto mt-4"></div>
           </div>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 font-light tracking-wide drop-shadow-lg">
-            Элитная группировка Los Santos
-          </p>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 font-light tracking-wide drop-shadow-lg">Элитная мафия Los Santos</p>
           
           <Button 
             size="lg" 
