@@ -22,8 +22,8 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-            <div className="text-4xl font-black text-primary tracking-wider">
-              SIZE
+            <div className="text-3xl md:text-4xl font-black text-primary tracking-wider">
+              Kavkazskoe Bratstvo
             </div>
             <div className="hidden md:block h-8 w-px bg-primary/30"></div>
             <div className="hidden md:block text-white/60 text-sm"></div>

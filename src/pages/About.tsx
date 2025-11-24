@@ -1,12 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div 
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/5722455c-be13-4c16-9b1f-04c6699970be/files/4611774d-bbab-4ec0-ad1e-2c88745b6e2b.jpg)' }}
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+        style={{ 
+          backgroundImage: 'url(https://cdn.poehali.dev/projects/5722455c-be13-4c16-9b1f-04c6699970be/files/4611774d-bbab-4ec0-ad1e-2c88745b6e2b.jpg)',
+          backgroundPositionY: `${scrollY * 0.3}px`
+        }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
         
@@ -27,7 +39,7 @@ export default function About() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">Наша история</h3>
                       <p className="text-white/80 leading-relaxed text-lg">
-                        SIZE - это не просто группировка, это элита Los Santos. Мы создали империю, 
+                        Kavkazskoe Bratstvo - это не просто группировка, это элита Los Santos. Мы создали империю, 
                         основанную на силе, уважении и непоколебимой верности. Наша организация 
                         контролирует ключевые точки города и устанавливает правила игры.
                       </p>
@@ -47,7 +59,7 @@ export default function About() {
                       <p className="text-white/80 leading-relaxed text-lg">
                         Мы стремимся к доминированию в криминальном мире Los Santos через 
                         стратегическое планирование, командную работу и безупречное выполнение 
-                        операций. Каждый член SIZE - это профессионал высшего класса.
+                        операций. Каждый член Kavkazskoe Bratstvo - это профессионал высшего класса.
                       </p>
                     </div>
                   </div>

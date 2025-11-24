@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { useEffect, useState } from "react";
 
 const newsData = [
   {
@@ -8,7 +9,7 @@ const newsData = [
     title: "Успешный захват территории",
     date: "15 ноября 2024",
     category: "Операции",
-    content: "SIZE провела успешную операцию по расширению зоны влияния в районе Vinewood Hills. Операция прошла без потерь.",
+    content: "Kavkazskoe Bratstvo провела успешную операцию по расширению зоны влияния в районе Vinewood Hills. Операция прошла без потерь.",
     icon: "Trophy"
   },
   {
@@ -16,7 +17,7 @@ const newsData = [
     title: "Новое пополнение",
     date: "10 ноября 2024",
     category: "Рекрутинг",
-    content: "В ряды SIZE вступили 15 новых перспективных членов. Все кандидаты прошли строгий отбор и доказали свою преданность.",
+    content: "В ряды Kavkazskoe Bratstvo вступили 15 новых перспективных членов. Все кандидаты прошли строгий отбор и доказали свою преданность.",
     icon: "Users"
   },
   {
@@ -32,17 +33,28 @@ const newsData = [
     title: "Обновление базы",
     date: "1 ноября 2024",
     category: "Инфраструктура",
-    content: "Завершена модернизация главной базы SIZE. Новое оборудование и улучшенная система безопасности.",
+    content: "Завершена модернизация главной базы Kavkazskoe Bratstvo. Новое оборудование и улучшенная система безопасности.",
     icon: "Building"
   }
 ];
 
 export default function News() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div 
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/5722455c-be13-4c16-9b1f-04c6699970be/files/998c309e-c45d-4281-82cf-509957d1ad4b.jpg)' }}
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+        style={{ 
+          backgroundImage: 'url(https://cdn.poehali.dev/projects/5722455c-be13-4c16-9b1f-04c6699970be/files/998c309e-c45d-4281-82cf-509957d1ad4b.jpg)',
+          backgroundPositionY: `${scrollY * 0.3}px`
+        }}
       >
         <div className="absolute inset-0 bg-black/75"></div>
         
